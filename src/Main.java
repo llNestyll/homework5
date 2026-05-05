@@ -26,15 +26,15 @@ public class Main {
 
 
 
-        int clientOSq = 0;
+        int clientsOS = 0;
         int clientDeviceYear = 2013;
-        if (clientOSq == 0 && clientDeviceYear > 2015) {
+        if (clientsOS == 0 && clientDeviceYear > 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
-        else if (clientOSq == 0 && clientDeviceYear <= 2015) {
+        else if (clientsOS == 0 && clientDeviceYear <= 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         }
-        else if (clientOSq == 1 && clientDeviceYear > 2015) {
+        else if (clientsOS == 1 && clientDeviceYear > 2015) {
             System.out.println("Установите  версию приложения для Android по ссылке");
         }
         else  {
@@ -79,7 +79,11 @@ public class Main {
 
 
 
-        char monthNumber = 13;
+        char monthNumber = 11;
+        if (monthNumber > 12) {
+            System.out.println("Ошибка: некорректный номер месяца");
+            return;
+        }
         switch (monthNumber){
             case 12:
             case 1:
@@ -101,8 +105,6 @@ public class Main {
             case 11:
                 System.out.println("этот месяц принадлежит к сезону осень");
                 break;
-            default:
-                System.out.println("месяца с таким номером не существует");
         }
 
 
